@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction | A Minimal Book Example</title>
+  <title>Chapter 3 Literature Review | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 3 Literature Review | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 3 Literature Review | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Yihui Xie" />
 
 
-<meta name="date" content="2020-10-22" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="literature.html"/>
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="methods.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -136,7 +136,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="3" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i><b>3</b> Literature Review</a></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
@@ -164,18 +164,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
-<p>It is clear that nitrogen and phosphorous influence algal blooms in Utah lake, but the effect of other pollutants and environmental parameters including dissolved oxygen and temperature are not clearly understood. In this project, I will analyze if there is a relationship between all these parameters and the algal bloom, measure by the chlorophyll-a. Because of algal blooms are more common in Summer, the data will be categorized by month and by season. The data for this project is from the Ambient Water Quality Monitoring System of the Utah Department of Environmental Quality. This system has data from 1989 until today, but these data are more consistent in recent years. For this project, I will use the available data for the years 2017, 2018, and 2019.</p>
+<div id="literature-review" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Literature Review</h1>
+<p>A vital part of the water cycle is fresh surface water. On the surface, water is stored in rivers, streams, lakes, and ponds. The amount of water changes is always changing and these changes depend on other components of the water cycle. For example, in lakes, these variations depend on rainfall, inflow, outflow, infiltration and evaporation (USGS). Throughout the history of mankind, people settled near sources of fresh surface water since water is essential for life. In many cases, people have been faced with the need to build reservoirs and channels to store and give direction to the water they need to survive. But to sustain life, not only the quantity of water is important, its quality is also vital. Water needs to be sufficient in quantity and quality because it is used daily by people for different purposes, such as for human and animal consumption, for irrigation, and for recreation, among others.</p>
+<p>One of the great challenges in maintaining water quality is controlling the amount of nutrients it contains. The ways in which nutrients reach the aquatic ecosystem are varied. These can come from the atmosphere, groundwater, the discharge of rivers and streams, and the discharge of sewage. Although nutrients are essential for aquatic ecosystems, an excess can lead to some type of pollution, such as the algal blooms, an excessive increase in the amount of algae, very common in lakes and reservoirs. Increased pollution due to algal blooms in large freshwater bodies is a problem throughout the world. The empirical correlation between total phosphorus (TP) and chlorophyll a (Chl-a) have been used to develop simple models and guide management decisions since the 1960s <span class="citation">(Stow and Cha <a href="#ref-stow2013chlorophyll" role="doc-biblioref">2013</a>)</span><span class="citation">(Yuan and Jones <a href="#ref-yuan2020rethinking" role="doc-biblioref">2020</a>)</span>. However, the use of these models is limited by the inexactness in this correlation in particular lakes <span class="citation">(Yuan and Jones <a href="#ref-yuan2020rethinking" role="doc-biblioref">2020</a>)</span>. It is clear that phosphorus influences algal blooms, but the effect of other pollutants and environmental parameters are not clearly understood and may have equal or more importance. There have been numerous studies related to TP and Chl-a with other parameters as fundamental for the control of the algal bloom in lakes. The parameters used in these studies are total suspended solids <span class="citation">(Yuan and Jones <a href="#ref-yuan2020rethinking" role="doc-biblioref">2020</a>)</span>, Secchi Disk depth <span class="citation">(Brown et al. <a href="#ref-brown1998seasonal" role="doc-biblioref">1998</a>)</span><span class="citation">(Heiskary and Walker Jr <a href="#ref-heiskary1988developing" role="doc-biblioref">1988</a>)</span>, and nitrogen <span class="citation">(Filstrup and Downing <a href="#ref-filstrup2017relationship" role="doc-biblioref">2017</a>)</span>. To understand what is really happening inside a lake and to find possible solutions, a complete data collection and analysis of the data are necessary for each particular freshwater body.</p>
+<p>The state of Utah has several bodies of fresh water. The first pioneer settlements, which began in the mid-19th century, found the necessary water resources to live in this arid area. However, the appearance of definitive settlements produced a change in land use, impacting ecosystems, including the aquatic one. The first recorded signs of water contamination date from the year 1948 and are from Utah Lake, where contamination was found in different areas due to the lack of sewage trapping <span class="citation">(“Probe Slated in Pollution of Utah Lake” <a href="#ref-deseret1948pollution" role="doc-biblioref">1948</a>)</span>. The first efforts to control algal blooms have been on phosphorus, since it was considered the limiter. Nitrogen seems to be more limited than phosphorus, principally in high and dry areas, as Utah Lake would be <span class="citation">(Merritt <a href="#ref-merritt2004utah" role="doc-biblioref">2017</a>)</span>. In search of a solution to this and other water quality problems (and following the United States Environmental Protection Agency (EPA) goals), the Ambient Water Quality Monitoring System of the Utah Department of Environmental Quality has been working in water quality data collection. Also BYU and other universities have been collecting data of different parameters from these lakes and reservoirs.</p>
 
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-brown1998seasonal">
+<p>Brown, Claude D, Daniel E Canfield Jr, Roger W Bachmann, and Mark V Hoyer. 1998. “Seasonal Patterns of Chlorophyll, Nutrient Concentrations and Secchi Disk Transparency in Florida Lakes.” <em>Lake and Reservoir Management</em> 14 (1): 60–76.</p>
+</div>
+<div id="ref-filstrup2017relationship">
+<p>Filstrup, Christopher T, and John A Downing. 2017. “Relationship of Chlorophyll to Phosphorus and Nitrogen in Nutrient-Rich Lakes.” <em>Inland Waters</em> 7 (4): 385–400.</p>
+</div>
+<div id="ref-heiskary1988developing">
+<p>Heiskary, Steven A, and William W Walker Jr. 1988. “Developing Phosphorus Criteria for Minnesota Lakes.” <em>Lake and Reservoir Management</em> 4 (1): 1–9.</p>
+</div>
+<div id="ref-merritt2004utah">
+<p>Merritt, LB. 2017. “Utah Lake, a Few Considerations.” <em>Unpublished Letter. 3p</em>.</p>
+</div>
+<div id="ref-deseret1948pollution">
+<p>“Probe Slated in Pollution of Utah Lake.” 1948. <em>Deseret News, Salt Lake City, July 21, 1948. 8p</em>.</p>
+</div>
+<div id="ref-stow2013chlorophyll">
+<p>Stow, Craig A, and YoonKyung Cha. 2013. “Are Chlorophyll a–Total Phosphorus Correlations Useful for Inference and Prediction?” <em>Environmental Science &amp; Technology</em> 47 (8): 3768–73.</p>
+</div>
+<div id="ref-yuan2020rethinking">
+<p>Yuan, Lester L, and John R Jones. 2020. “Rethinking Phosphorus–Chlorophyll Relationships in Lakes.” <em>Limnology and Oceanography</em>.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
