@@ -4,9 +4,6 @@ A vital part of the water cycle is fresh surface water. One of the great challen
 
 The state of Utah has several bodies of fresh water. The first pioneer settlements, which began in the mid-19th century, found the necessary water resources to live in this arid area. However, the appearance of definitive settlements produced a change in land use, impacting ecosystems, including the aquatic one. The first recorded signs of water contamination date from the year 1948 and are from Utah Lake (UL), where contamination was found in different areas due to the lack of sewage trapping [@deseret1948pollution]. The first efforts to control algal blooms have been on phosphorus, since it was considered the limiter. Nitrogen seems to be more limited than phosphorus, principally in high and dry areas, as Utah Lake would be [@merritt2004utah]. In search of a solution to this and other water quality problems (and following the United States Environmental Protection Agency (EPA) goals), the Utah Department of Water Quality (DWQ) has been working in water quality data collection. A study of all the data gathered using statistical tools through an open-source software for data science can lead to important discoveries.
 
-## Data Import
-10 parameters of the UL data available from the DWQ from the years 2017, 2018, and 2019 are analyzed in this report. 
-
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(knitr)
@@ -16,13 +13,26 @@ library(leaflet)
 
 ```{r import, include=FALSE}
 data<-read_csv('data/utah_lake.csv')
+
+#agregar fraccion al parametro
+data$char<-data$Characteristic=="Turbidity"
+data$Fraction = ifelse(data$char==TRUE, NA, data$Fraction)
+data = select (data,-c(char))
+data$frac1<-data$Fraction==''
+data$frac1 = ifelse(is.na(data$frac1), TRUE, FALSE)
+data$frac2<-paste(data$Characteristic, data$Fraction)
+data$Characteristic = ifelse(data$frac1==TRUE, data$Characteristic, data$frac2)
+data$Characteristic
+data = select (data,-c(frac1, frac2))
+data<-data
+
+data$Date = as.Date(data$Date, "%m-%d-%Y")
+param<-data[!duplicated(data$Characteristic), ]
+total_param<-nrow(param)
 ```
 
-```{r include=FALSE}
-#agregar fraccion al parametro
-data$Characteristic = paste(data$Characteristic, data$Fraction)
-data$Date = as.Date(data$Date, "%m-%d-%Y")
-```
+## Data Import
+`r total_param` parameters of the UL data available from the DWQ from the years 2017, 2018, and 2019 are analyzed in this report. 
 
 ```{r echo=FALSE}
 knitr::kable(
@@ -30,17 +40,19 @@ knitr::kable(
   booktabs = TRUE)%>% 
   kable_styling(latex_options="scale_down")
 ```
+```{r include=FALSE}
+ul<-data[!duplicated(data$Longitude), ]
+total_stations<-nrow(ul)
+```
 
-The data, that include data from 12 stations, were downloaded in October of 2020. 
+The data, that include data from `r total_stations` stations, were downloaded in October of 2020. 
 
 ```{r echo=FALSE}
-ul<-data[!duplicated(data$Longitude), ]
 ul%>%
   leaflet() %>%
   setView(lng=-111.83, lat=40.15, zoom=10)%>%
   addTiles()%>%
   addMarkers(lng = ~Longitude, lat= ~Latitude, popup= ~LocationName)
-ul
 ```
 The available data are from April to November. However there are month in which there are no Chl-a data. These month are eliminated from the analysis.
 
@@ -59,12 +71,12 @@ data_500<-data%>%
 
 #cambiar nombres columnas
 data_500%>%
-  rename(DO=`Dissolved oxygen (DO) NA`)%>%
+  rename(DO=`Dissolved oxygen (DO)`)%>%
   rename(DN=`Nitrogen Dissolved`)%>%
   rename(TN=`Nitrogen Total`)%>%
   rename(DP=`Phosphate-phosphorus Dissolved`)%>%
   rename(TP=`Phosphate-phosphorus Total`)%>%
-  rename(TW=`Temperature, water NA`)
+  rename(TW=`Temperature, water`)
 ```
 
 

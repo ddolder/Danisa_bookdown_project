@@ -182,10 +182,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The state of Utah has several bodies of fresh water. The first pioneer settlements, which began in the mid-19th century, found the necessary water resources to live in this arid area. However, the appearance of definitive settlements produced a change in land use, impacting ecosystems, including the aquatic one. The first recorded signs of water contamination date from the year 1948 and are from Utah Lake (UL), where contamination was found in different areas due to the lack of sewage trapping <span class="citation">(“Probe Slated in Pollution of Utah Lake” <a href="#ref-deseret1948pollution" role="doc-biblioref">1948</a>)</span>. The first efforts to control algal blooms have been on phosphorus, since it was considered the limiter. Nitrogen seems to be more limited than phosphorus, principally in high and dry areas, as Utah Lake would be <span class="citation">(Merritt <a href="#ref-merritt2004utah" role="doc-biblioref">2017</a>)</span>. In search of a solution to this and other water quality problems (and following the United States Environmental Protection Agency (EPA) goals), the Utah Department of Water Quality (DWQ) has been working in water quality data collection. A study of all the data gathered using statistical tools through an open-source software for data science can lead to important discoveries.</p>
 <div id="data-import" class="section level2">
 <h2><span class="header-section-number">3.1</span> Data Import</h2>
-<p>10 parameters of the UL data available from the DWQ from the years 2017,2018, and 2019 are analyzed in this report.</p>
+<p>10 parameters of the UL data available from the DWQ from the years 2017, 2018, and 2019 are analyzed in this report.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-2">Table 3.1: </span>Example of the data
+<span id="tab:unnamed-chunk-1">Table 3.1: </span>Example of the data
 </caption>
 <thead>
 <tr>
@@ -236,7 +236,7 @@ UTAH LAKE GOSHEN BAY SOUTHWEST END
 2017-05-10
 </td>
 <td style="text-align:left;">
-Temperature, water NA
+Temperature, water
 </td>
 <td style="text-align:left;">
 NA
@@ -265,7 +265,7 @@ UTAH LAKE GOSHEN BAY SOUTHWEST END
 2017-05-10
 </td>
 <td style="text-align:left;">
-pH NA
+pH
 </td>
 <td style="text-align:left;">
 NA
@@ -294,7 +294,7 @@ UTAH LAKE GOSHEN BAY SOUTHWEST END
 2017-05-10
 </td>
 <td style="text-align:left;">
-Dissolved oxygen (DO) NA
+Dissolved oxygen (DO)
 </td>
 <td style="text-align:left;">
 NA
@@ -395,25 +395,10 @@ ug/l
 </tr>
 </tbody>
 </table>
-<p>The data, that include data from 12 stations, were downloaded in October of 2020.</p>
-<div id="htmlwidget-2280a371078e85af9ea5" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2280a371078e85af9ea5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[40.15,-111.83],10,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[40.06023518,40.16967582,40.1577293,40.169162,40.18856667,40.18913907,40.34216863,40.32087,40.29569,40.26828256,40.23717289],[-111.8743836,-111.8716056,-111.7913255,-111.777287,-111.7313142,-111.6999312,-111.8713257,-111.77754,-111.80282,-111.8299304,-111.7646472],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["UTAH LAKE GOSHEN BAY SOUTHWEST END","UTAH LAKE 3 MI WNW OF LINCOLN BEACH","UTAH LAKE 1 MI NE OF LINCOLN POINT #03","Utah Lake 1 mile southeast of Bird Island","UTAH LAKE  OUTSIDE ENTRANCE TO PROVO BAY","UTAH LAKE AT MIDDLE OF PROVO BAY","UTAH LAKE 2 MI E OF SARATOGA SPRINGS #12","UTAH LAKE 0.5 MI W OF GENEVA DISCHARGE #15-A","Utah Lake 2 miles west of Vineyard","UTAH LAKE 1 MI EAST OF PELICAN POINT","UTAH LAKE 1 MI WEST OF PROVO BOAT HARBOR"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[40.06023518,40.34216863],"lng":[-111.8743836,-111.6999312]}},"evals":[],"jsHooks":[]}</script>
-<pre><code>## # A tibble: 11 x 9
-##    LocationID LocationName Latitude Longitude Date       Characteristic Fraction
-##         &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt;          &lt;chr&gt;   
-##  1    4917600 UTAH LAKE G…     40.1     -112. 2017-05-10 Temperature, … &lt;NA&gt;    
-##  2    4917500 UTAH LAKE 3…     40.2     -112. 2017-05-10 Turbidity Tot… Total   
-##  3    4917710 UTAH LAKE 1…     40.2     -112. 2017-05-10 Total dissolv… Total   
-##  4    4917715 Utah Lake 1…     40.2     -112. 2017-05-10 pH NA          &lt;NA&gt;    
-##  5    4917770 UTAH LAKE  …     40.2     -112. 2017-05-10 Turbidity Tot… Total   
-##  6    4917450 UTAH LAKE A…     40.2     -112. 2017-05-10 pH NA          &lt;NA&gt;    
-##  7    4917520 UTAH LAKE 2…     40.3     -112. 2017-05-11 Dissolved oxy… &lt;NA&gt;    
-##  8    4917310 UTAH LAKE 0…     40.3     -112. 2017-05-11 Phosphate-pho… Total   
-##  9    4917365 Utah Lake 2…     40.3     -112. 2017-05-11 Total dissolv… Total   
-## 10    4917370 UTAH LAKE 1…     40.3     -112. 2017-05-11 Chlorophyll a… Total   
-## 11    4917390 UTAH LAKE 1…     40.2     -112. 2017-05-11 pH NA          &lt;NA&gt;    
-## # … with 2 more variables: Value &lt;dbl&gt;, Unit &lt;chr&gt;</code></pre>
-<p>The available data are from April to November. However there are month in which there are no Chl-a data. These month are eliminated from the analysis.</p>
+<p>The data, that include data from 11 stations, were downloaded in October of 2020.</p>
+<p><div id="htmlwidget-9d3678cb0656f88b61c1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d3678cb0656f88b61c1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[40.15,-111.83],10,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[40.06023518,40.16967582,40.1577293,40.169162,40.18856667,40.18913907,40.34216863,40.32087,40.29569,40.26828256,40.23717289],[-111.8743836,-111.8716056,-111.7913255,-111.777287,-111.7313142,-111.6999312,-111.8713257,-111.77754,-111.80282,-111.8299304,-111.7646472],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["UTAH LAKE GOSHEN BAY SOUTHWEST END","UTAH LAKE 3 MI WNW OF LINCOLN BEACH","UTAH LAKE 1 MI NE OF LINCOLN POINT #03","Utah Lake 1 mile southeast of Bird Island","UTAH LAKE  OUTSIDE ENTRANCE TO PROVO BAY","UTAH LAKE AT MIDDLE OF PROVO BAY","UTAH LAKE 2 MI E OF SARATOGA SPRINGS #12","UTAH LAKE 0.5 MI W OF GENEVA DISCHARGE #15-A","Utah Lake 2 miles west of Vineyard","UTAH LAKE 1 MI EAST OF PELICAN POINT","UTAH LAKE 1 MI WEST OF PROVO BOAT HARBOR"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[40.06023518,40.34216863],"lng":[-111.8743836,-111.6999312]}},"evals":[],"jsHooks":[]}</script>
+The available data are from April to November. However there are month in which there are no Chl-a data. These month are eliminated from the analysis.</p>
 <table>
 <caption>
 <span id="tab:unnamed-chunk-5">Table 3.2: </span>Station 4917500 data
@@ -430,7 +415,7 @@ month
 Chlorophyll a, corrected for pheophytin Total
 </th>
 <th style="text-align:right;">
-Dissolved oxygen (DO) NA
+Dissolved oxygen (DO)
 </th>
 <th style="text-align:right;">
 Nitrogen Dissolved
@@ -439,7 +424,7 @@ Nitrogen Dissolved
 Nitrogen Total
 </th>
 <th style="text-align:right;">
-pH NA
+pH
 </th>
 <th style="text-align:right;">
 Phosphate-phosphorus Dissolved
@@ -448,13 +433,13 @@ Phosphate-phosphorus Dissolved
 Phosphate-phosphorus Total
 </th>
 <th style="text-align:right;">
-Temperature, water NA
+Temperature, water
 </th>
 <th style="text-align:right;">
 Total dissolved solids Total
 </th>
 <th style="text-align:right;">
-Turbidity Total
+Turbidity
 </th>
 </tr>
 </thead>
