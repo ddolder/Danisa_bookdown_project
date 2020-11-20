@@ -1,5 +1,27 @@
 # Methods
 
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(leaflet)
+library(rprojroot)
+```
+
+```{r import, include=FALSE}
+source(here::here("code/import.R"))
+```
+
+```{r table, include=FALSE}
+source(here::here("code/table.R"))
+```
+
+```{r datos450, echo=FALSE}
+knitr::kable(
+  head(data4917450,20), caption = 'Station 4917450 data',
+  booktabs = TRUE
+)
+```
 We describe our methods in this chapter.
 
 Here is a review of existing methods.

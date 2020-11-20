@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Methods | A Minimal Book Example</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <title>Chapter 4 Methods | Utah lake paramters analysis</title>
+  <meta name="description" content="CE EN 594R-001 Term Project" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Methods | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 4 Methods | Utah lake paramters analysis" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta property="og:description" content="CE EN 594R-001 Term Project" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Methods | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 4 Methods | Utah lake paramters analysis" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:description" content="CE EN 594R-001 Term Project" />
   
 
-<meta name="author" content="Yihui Xie" />
+<meta name="author" content="Danisa Dolder" />
 
 
-<meta name="date" content="2020-11-10" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Abstract</a></li>
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
 <li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a><ul>
 <li class="chapter" data-level="3.1" data-path="literature.html"><a href="literature.html#data-import"><i class="fa fa-check"></i><b>3.1</b> Data Import</a></li>
@@ -158,7 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Utah lake paramters analysis</a>
           </h1>
         </div>
 
@@ -168,6 +168,813 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="methods" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Methods</h1>
+<table>
+<caption>
+<span id="tab:datos450">Table 4.1: </span>Station 4917450 data
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Year
+</th>
+<th style="text-align:left;">
+month
+</th>
+<th style="text-align:right;">
+Chlorophyll a Total
+</th>
+<th style="text-align:right;">
+Dissolved oxygen (DO)
+</th>
+<th style="text-align:right;">
+Nitrogen Dissolved
+</th>
+<th style="text-align:right;">
+Nitrogen Total
+</th>
+<th style="text-align:right;">
+pH
+</th>
+<th style="text-align:right;">
+Phosphate-phosphorus Dissolved
+</th>
+<th style="text-align:right;">
+Phosphate-phosphorus Total
+</th>
+<th style="text-align:right;">
+Temperature, water
+</th>
+<th style="text-align:right;">
+Total dissolved solids Total
+</th>
+<th style="text-align:right;">
+Turbidity
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+05
+</td>
+<td style="text-align:right;">
+75.53333
+</td>
+<td style="text-align:right;">
+11.080000
+</td>
+<td style="text-align:right;">
+0.7920
+</td>
+<td style="text-align:right;">
+0.6730
+</td>
+<td style="text-align:right;">
+8.922500
+</td>
+<td style="text-align:right;">
+0.1080
+</td>
+<td style="text-align:right;">
+0.3720
+</td>
+<td style="text-align:right;">
+21.16000
+</td>
+<td style="text-align:right;">
+220
+</td>
+<td style="text-align:right;">
+64.80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+06
+</td>
+<td style="text-align:right;">
+80.16667
+</td>
+<td style="text-align:right;">
+13.890000
+</td>
+<td style="text-align:right;">
+0.6170
+</td>
+<td style="text-align:right;">
+0.6630
+</td>
+<td style="text-align:right;">
+8.625000
+</td>
+<td style="text-align:right;">
+0.0780
+</td>
+<td style="text-align:right;">
+0.2350
+</td>
+<td style="text-align:right;">
+21.27500
+</td>
+<td style="text-align:right;">
+588
+</td>
+<td style="text-align:right;">
+52.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+07
+</td>
+<td style="text-align:right;">
+254.22222
+</td>
+<td style="text-align:right;">
+9.937143
+</td>
+<td style="text-align:right;">
+0.7930
+</td>
+<td style="text-align:right;">
+1.1700
+</td>
+<td style="text-align:right;">
+9.111429
+</td>
+<td style="text-align:right;">
+0.3760
+</td>
+<td style="text-align:right;">
+0.6870
+</td>
+<td style="text-align:right;">
+26.41429
+</td>
+<td style="text-align:right;">
+514
+</td>
+<td style="text-align:right;">
+125.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+08
+</td>
+<td style="text-align:right;">
+265.50000
+</td>
+<td style="text-align:right;">
+9.701429
+</td>
+<td style="text-align:right;">
+0.7890
+</td>
+<td style="text-align:right;">
+1.0700
+</td>
+<td style="text-align:right;">
+9.108671
+</td>
+<td style="text-align:right;">
+0.0870
+</td>
+<td style="text-align:right;">
+0.6960
+</td>
+<td style="text-align:right;">
+22.53300
+</td>
+<td style="text-align:right;">
+566
+</td>
+<td style="text-align:right;">
+152.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+09
+</td>
+<td style="text-align:right;">
+133.11111
+</td>
+<td style="text-align:right;">
+8.160000
+</td>
+<td style="text-align:right;">
+4.7000
+</td>
+<td style="text-align:right;">
+2.2600
+</td>
+<td style="text-align:right;">
+8.510000
+</td>
+<td style="text-align:right;">
+0.3500
+</td>
+<td style="text-align:right;">
+0.5030
+</td>
+<td style="text-align:right;">
+15.82000
+</td>
+<td style="text-align:right;">
+610
+</td>
+<td style="text-align:right;">
+79.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+14.83556
+</td>
+<td style="text-align:right;">
+11.700000
+</td>
+<td style="text-align:right;">
+2.8700
+</td>
+<td style="text-align:right;">
+3.0400
+</td>
+<td style="text-align:right;">
+8.503500
+</td>
+<td style="text-align:right;">
+0.2430
+</td>
+<td style="text-align:right;">
+0.2920
+</td>
+<td style="text-align:right;">
+13.04000
+</td>
+<td style="text-align:right;">
+674
+</td>
+<td style="text-align:right;">
+8.91
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:right;">
+13.47556
+</td>
+<td style="text-align:right;">
+7.930000
+</td>
+<td style="text-align:right;">
+2.1300
+</td>
+<td style="text-align:right;">
+2.0200
+</td>
+<td style="text-align:right;">
+8.030000
+</td>
+<td style="text-align:right;">
+0.3180
+</td>
+<td style="text-align:right;">
+0.4230
+</td>
+<td style="text-align:right;">
+8.78000
+</td>
+<td style="text-align:right;">
+722
+</td>
+<td style="text-align:right;">
+54.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:left;">
+05
+</td>
+<td style="text-align:right;">
+80.66667
+</td>
+<td style="text-align:right;">
+17.176667
+</td>
+<td style="text-align:right;">
+0.4880
+</td>
+<td style="text-align:right;">
+0.7010
+</td>
+<td style="text-align:right;">
+8.816667
+</td>
+<td style="text-align:right;">
+0.0210
+</td>
+<td style="text-align:right;">
+0.3100
+</td>
+<td style="text-align:right;">
+18.38444
+</td>
+<td style="text-align:right;">
+392
+</td>
+<td style="text-align:right;">
+25.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:left;">
+06
+</td>
+<td style="text-align:right;">
+230.66667
+</td>
+<td style="text-align:right;">
+10.947500
+</td>
+<td style="text-align:right;">
+1.0700
+</td>
+<td style="text-align:right;">
+0.7190
+</td>
+<td style="text-align:right;">
+8.978750
+</td>
+<td style="text-align:right;">
+0.1130
+</td>
+<td style="text-align:right;">
+0.5150
+</td>
+<td style="text-align:right;">
+21.13250
+</td>
+<td style="text-align:right;">
+452
+</td>
+<td style="text-align:right;">
+105.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:left;">
+07
+</td>
+<td style="text-align:right;">
+389.10000
+</td>
+<td style="text-align:right;">
+5.271667
+</td>
+<td style="text-align:right;">
+0.8050
+</td>
+<td style="text-align:right;">
+1.0200
+</td>
+<td style="text-align:right;">
+9.208333
+</td>
+<td style="text-align:right;">
+0.1190
+</td>
+<td style="text-align:right;">
+0.6650
+</td>
+<td style="text-align:right;">
+23.77167
+</td>
+<td style="text-align:right;">
+488
+</td>
+<td style="text-align:right;">
+178.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:left;">
+08
+</td>
+<td style="text-align:right;">
+135.33333
+</td>
+<td style="text-align:right;">
+6.142500
+</td>
+<td style="text-align:right;">
+0.9940
+</td>
+<td style="text-align:right;">
+0.5830
+</td>
+<td style="text-align:right;">
+8.792500
+</td>
+<td style="text-align:right;">
+0.1780
+</td>
+<td style="text-align:right;">
+0.5560
+</td>
+<td style="text-align:right;">
+21.13750
+</td>
+<td style="text-align:right;">
+538
+</td>
+<td style="text-align:right;">
+59.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:left;">
+09
+</td>
+<td style="text-align:right;">
+21.40000
+</td>
+<td style="text-align:right;">
+12.825990
+</td>
+<td style="text-align:right;">
+2.1900
+</td>
+<td style="text-align:right;">
+1.8500
+</td>
+<td style="text-align:right;">
+8.573159
+</td>
+<td style="text-align:right;">
+0.2630
+</td>
+<td style="text-align:right;">
+0.4030
+</td>
+<td style="text-align:right;">
+22.65262
+</td>
+<td style="text-align:right;">
+696
+</td>
+<td style="text-align:right;">
+61.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+67.06667
+</td>
+<td style="text-align:right;">
+19.961040
+</td>
+<td style="text-align:right;">
+4.7100
+</td>
+<td style="text-align:right;">
+4.9600
+</td>
+<td style="text-align:right;">
+8.707098
+</td>
+<td style="text-align:right;">
+0.1920
+</td>
+<td style="text-align:right;">
+0.3670
+</td>
+<td style="text-align:right;">
+13.36701
+</td>
+<td style="text-align:right;">
+660
+</td>
+<td style="text-align:right;">
+107.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+04
+</td>
+<td style="text-align:right;">
+28.86000
+</td>
+<td style="text-align:right;">
+12.400000
+</td>
+<td style="text-align:right;">
+4.8600
+</td>
+<td style="text-align:right;">
+4.4200
+</td>
+<td style="text-align:right;">
+8.540000
+</td>
+<td style="text-align:right;">
+0.3460
+</td>
+<td style="text-align:right;">
+0.5290
+</td>
+<td style="text-align:right;">
+13.30000
+</td>
+<td style="text-align:right;">
+846
+</td>
+<td style="text-align:right;">
+60.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+04
+</td>
+<td style="text-align:right;">
+4.94300
+</td>
+<td style="text-align:right;">
+10.000000
+</td>
+<td style="text-align:right;">
+0.6760
+</td>
+<td style="text-align:right;">
+1.0300
+</td>
+<td style="text-align:right;">
+8.460000
+</td>
+<td style="text-align:right;">
+0.0930
+</td>
+<td style="text-align:right;">
+0.1370
+</td>
+<td style="text-align:right;">
+16.10000
+</td>
+<td style="text-align:right;">
+240
+</td>
+<td style="text-align:right;">
+22.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+05
+</td>
+<td style="text-align:right;">
+47.40000
+</td>
+<td style="text-align:right;">
+17.380000
+</td>
+<td style="text-align:right;">
+0.3520
+</td>
+<td style="text-align:right;">
+0.6720
+</td>
+<td style="text-align:right;">
+9.550000
+</td>
+<td style="text-align:right;">
+0.0560
+</td>
+<td style="text-align:right;">
+0.1960
+</td>
+<td style="text-align:right;">
+18.67000
+</td>
+<td style="text-align:right;">
+294
+</td>
+<td style="text-align:right;">
+15.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+06
+</td>
+<td style="text-align:right;">
+247.75000
+</td>
+<td style="text-align:right;">
+18.477500
+</td>
+<td style="text-align:right;">
+0.6460
+</td>
+<td style="text-align:right;">
+0.8500
+</td>
+<td style="text-align:right;">
+9.140000
+</td>
+<td style="text-align:right;">
+0.1190
+</td>
+<td style="text-align:right;">
+0.4910
+</td>
+<td style="text-align:right;">
+23.75833
+</td>
+<td style="text-align:right;">
+382
+</td>
+<td style="text-align:right;">
+67.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+07
+</td>
+<td style="text-align:right;">
+168.00000
+</td>
+<td style="text-align:right;">
+6.925714
+</td>
+<td style="text-align:right;">
+0.7690
+</td>
+<td style="text-align:right;">
+0.7420
+</td>
+<td style="text-align:right;">
+8.636429
+</td>
+<td style="text-align:right;">
+0.4450
+</td>
+<td style="text-align:right;">
+0.7630
+</td>
+<td style="text-align:right;">
+21.81643
+</td>
+<td style="text-align:right;">
+510
+</td>
+<td style="text-align:right;">
+70.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+08
+</td>
+<td style="text-align:right;">
+10.36850
+</td>
+<td style="text-align:right;">
+12.421938
+</td>
+<td style="text-align:right;">
+0.7905
+</td>
+<td style="text-align:right;">
+0.6725
+</td>
+<td style="text-align:right;">
+8.812785
+</td>
+<td style="text-align:right;">
+0.0940
+</td>
+<td style="text-align:right;">
+0.3085
+</td>
+<td style="text-align:right;">
+23.91766
+</td>
+<td style="text-align:right;">
+628
+</td>
+<td style="text-align:right;">
+58.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:left;">
+09
+</td>
+<td style="text-align:right;">
+95.60000
+</td>
+<td style="text-align:right;">
+13.283333
+</td>
+<td style="text-align:right;">
+0.7255
+</td>
+<td style="text-align:right;">
+0.8595
+</td>
+<td style="text-align:right;">
+8.966667
+</td>
+<td style="text-align:right;">
+0.0995
+</td>
+<td style="text-align:right;">
+0.2770
+</td>
+<td style="text-align:right;">
+15.36667
+</td>
+<td style="text-align:right;">
+662
+</td>
+<td style="text-align:right;">
+46.70
+</td>
+</tr>
+</tbody>
+</table>
 <p>We describe our methods in this chapter.</p>
 <p>Here is a review of existing methods.</p>
 <p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
