@@ -1,0 +1,51 @@
+# Methodology
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(leaflet)
+library(rprojroot)
+```
+
+```{r import, include=FALSE}
+source(here::here("code/import.R"))
+```
+
+```{r table, include=FALSE}
+source(here::here("code/table.R"))
+```
+
+```{r rename, include=FALSE}
+source(here::here("code/rename.R"))
+```
+
+```{r data-450, echo=FALSE}
+data450<-data4917450[!(data4917450$month=="04" | data4917450$month=="10" | data4917450$month=="11"),]
+knitr::kable(
+  head(data450,20), caption = 'Station 4917450 data',
+  booktabs = TRUE
+)
+```
+
+
+
+```{r chla-boxplot, fig.cap='Chlorophyll a distribution by month', out.width='80%', fig.asp=.75, fig.align='center'}
+hist(data$Value)
+boxplot(Chla~month,data=data450)
+kruskal.test(Chla~month,data=data450)
+boxplot(TP~month,data=data450)
+boxplot(TN~month,data=data450)
+boxplot(Turb~month,data=data450)
+boxplot(TW~month,data=data450)
+ggplot(data450,aes(x=TP, y=Chla))+
+  #facet_grid(.~month)+
+  geom_point()+
+  geom_smooth()
+ggplot(data,aes(fill=Date, x=Characteristic, y=Value))+
+  geom_bar(position="dodge", stat="identity")
+```
+
+
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].

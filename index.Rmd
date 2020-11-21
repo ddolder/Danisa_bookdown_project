@@ -1,5 +1,5 @@
 --- 
-title: "Utah lake paramters analysis"
+title: "Utah lake parameters analysis"
 author: "Danisa Dolder"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,18 +8,9 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 description: "CE EN 594R-001 Term Project"
+abstract: Parks provide important benefits to those who live near them, in the form of improved property 
 ---
 
-# Abstract
+# Introduction
 
-This is 
-
-
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+It is clear that nitrogen and phosphorous influence algal blooms in Utah lake, but the effect of other pollutants and environmental parameters including dissolved oxygen and temperature are not clearly understood. In this project, I will analyze if there is a relationship between all these parameters and the algal bloom, measure by the chlorophyll-a. Because of algal blooms are more common in Summer, the data will be categorized by month and by season. The data for this project is from the Ambient Water Quality Monitoring System (AWQMS) of the Utah Department of Environmental Quality (DEQ). This system has data from 1989 until today, but these data are more consistent in recent years. For this project, I will use the available data for the years 2017, 2018, and 2019.

@@ -11,11 +11,5 @@ for(i in stations_ID){
     arrange(Date)%>%
     separate(Date,into=c('Year', 'month','day'), sep="-", remove = TRUE)%>%
     select(-day)
-  #  rename(DO=`Dissolved oxygen (DO)`)%>%
-  #  rename(DN=`Nitrogen Dissolved`)%>%
-  #  rename(TN=`Nitrogen Total`)%>%
-  #  rename(DP=`Phosphate-phosphorus Dissolved`)%>%
-  #  rename(TP=`Phosphate-phosphorus Total`)%>%
-  #  rename(TW=`Temperature, water`)
   assign(paste0("data", i), dataID)
 }
