@@ -1,6 +1,109 @@
 # Results
 
-Some _significant_ applications are demonstrated in this chapter.
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(leaflet)
+library(rprojroot)
+library(GGally)
+```
+
+```{r import, include=FALSE}
+source(here::here("code/import.R"))
+```
+
+```{r table, include=FALSE}
+source(here::here("code/table.R"))
+```
+
+```{r rename, include=FALSE}
+source(here::here("code/rename.R"))
+```
+
+```{r data-450, echo=FALSE}
+data450<-data4917450[!(data4917450$month=="04" | data4917450$month=="10" | data4917450$month=="11"),]
+knitr::kable(
+  head(data450,20), caption = 'Station 4917450 data',
+  booktabs = TRUE
+)
+```
+Using the Spearman Method, the correlation coefficients between all the parameters show a strong positive correlation between the Total Phosphorus and the Chlorophyll-a
+```{r, echo=FALSE}
+x = data450[,c(3:10)]
+ggcorr(x, nbreaks = 20, mid = "white", high="darkred", label=T, method = c('pairwise','spearman'))
+```
+The positive correlation between the TP and Chl-a is stronger for values of TP between 0.40 and 0.65 mg/l. 
+```{r chla-TP, echo=FALSE}
+ggplot(data450, aes(x=TP, y=Chla))+
+  geom_point(aes(color=month))+
+  geom_smooth()
+```
+The time series analysis of the Chl-a, TP, and TN shows that when the TN too high, the Chl-a decreases, even though the TP has value between 0.4 and 0.65.
+
+```{r data_timeseries, include=FALSE}
+data_serie<-data%>%
+  filter(LocationID==4917450)%>%
+  select(Date, Characteristic, Value)%>%
+  group_by(Date, Characteristic)%>%
+  summarise(mean_value=mean(Value))%>%
+  spread(Characteristic, mean_value)%>%
+  arrange(Date)%>%
+  rename(DO= 'Dissolved oxygen (DO)')%>%
+  rename(DN='Nitrogen Dissolved')%>%
+  rename(TN='Nitrogen Total')%>%
+  rename(DP='Phosphate-phosphorus Dissolved')%>%
+  rename(TP='Phosphate-phosphorus Total')%>%
+  rename(Chla='Chlorophyll a Total')%>%
+  rename(Turb='Turbidity')%>%
+  rename(TDST='Total dissolved solids Total')%>%
+  rename(TW='Temperature, water')
+```
+
+```{r, echo=FALSE}
+ggplot(data_serie, aes(x=Date))+
+    geom_point(aes(y=TP, color="TP"))+
+    geom_line(aes(y=TP, color="TP"))+
+    geom_point(aes(y=Chla/150, color="Chl-a"))+
+    geom_line(aes(y=Chla/150, color="Chl-a"))+
+    geom_point(aes(y=TN/2, color="TN"))+
+    geom_line(aes(y=TN/2, color="TN"))+
+    geom_hline(yintercept=0.4, color='red')+
+    geom_hline(yintercept=0.65, color='red')
+```
+The positive correlation between the TN and Chl-a is for values of TN between 0.60 and 1.10 mg/l. 
+```{r chla_TN, echo=FALSE}
+ggplot(data450, aes(x=TN, y=Chla))+
+  geom_point(aes(color=month))+
+  geom_smooth()
+```
+Because the TP and DO have a strong negative correlation, the time series analysis is performed to see the relationship between these too variables and the Chl-a.
+
+```{r, echo=FALSE}
+ggplot(data_serie, aes(x=Date))+
+    geom_point(aes(y=TP, color="TP"))+
+    geom_line(aes(y=TP, color="TP"))+
+    geom_point(aes(y=Chla/150, color="Chl-a"))+
+    geom_line(aes(y=Chla/150, color="Chl-a"))+
+    geom_point(aes(y=DO/12, color="DO"))+
+    geom_line(aes(y=DO/12, color="DO"))+
+    geom_hline(yintercept=0.4, color='red')+
+    geom_hline(yintercept=0.65, color='red')
+```
+```{r chla_DO, echo=FALSE}
+ggplot(data450, aes(x=DO, y=Chla))+
+  geom_point(aes(color=month))+
+  geom_smooth()
+```
+```{r TP_DO, echo=FALSE}
+ggplot(data450, aes(x=TP, y=DO))+
+  geom_point(aes(color=month))+
+  geom_smooth()
+```
+
+```{r boxplot1, fig.cap='Chlorophyll a distribution by month', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
+boxplot(Chla~month,data=data450)
+```
 
 ## Example one
 

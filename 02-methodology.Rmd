@@ -1,4 +1,3 @@
-# Methodology
 
 ```{r setup, include=FALSE}
 library(tidyverse)
@@ -16,6 +15,10 @@ source(here::here("code/import.R"))
 source(here::here("code/table.R"))
 ```
 
+# Data Analysis 
+
+After analyzed the data of each station, there were find many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)
+
 ```{r rename, include=FALSE}
 source(here::here("code/rename.R"))
 ```
@@ -27,25 +30,18 @@ knitr::kable(
   booktabs = TRUE
 )
 ```
+## Data Quality
 
-
-
-```{r chla-boxplot, fig.cap='Chlorophyll a distribution by month', out.width='80%', fig.asp=.75, fig.align='center'}
-hist(data$Value)
-boxplot(Chla~month,data=data450)
-kruskal.test(Chla~month,data=data450)
-boxplot(TP~month,data=data450)
-boxplot(TN~month,data=data450)
-boxplot(Turb~month,data=data450)
-boxplot(TW~month,data=data450)
-ggplot(data450,aes(x=TP, y=Chla))+
-  #facet_grid(.~month)+
-  geom_point()+
-  geom_smooth()
-ggplot(data,aes(fill=Date, x=Characteristic, y=Value))+
-  geom_bar(position="dodge", stat="identity")
+The data size is not big, but it is enough to perform a good analysis.  As it can be seen in table 3.1, there are not missing values in the station 4917450. The following stadistics show that there are not outliers.
+```{r, echo=FALSE}
+data_sum<-select(data450,-Year,-month)
+summary(data_sum)
 ```
 
-
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.
+```{r, echo=FALSE}
+ggplot(data=data450, aes(Chla)) + 
+  geom_histogram(binwidth=75, colour="black", fill="white")+
+  labs(title='Chlorophyll-a Distribution', x='Chlorophyll-a')
+```
+Encontrar que esta ocurriendo con los otros parametros cuando la clorofila sube?

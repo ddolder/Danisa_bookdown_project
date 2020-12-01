@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Results | The nutrients - Chlorophyll-a relationship in Utah Lake, Utah</title>
+  <title>Chapter 3 Data Analysis | The nutrients - Chlorophyll-a relationship in Utah Lake, Utah</title>
   <meta name="description" content="CE EN 594R-001 Term Project" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Results | The nutrients - Chlorophyll-a relationship in Utah Lake, Utah" />
+  <meta property="og:title" content="Chapter 3 Data Analysis | The nutrients - Chlorophyll-a relationship in Utah Lake, Utah" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Results | The nutrients - Chlorophyll-a relationship in Utah Lake, Utah" />
+  <meta name="twitter:title" content="Chapter 3 Data Analysis | The nutrients - Chlorophyll-a relationship in Utah Lake, Utah" />
   
   <meta name="twitter:description" content="CE EN 594R-001 Term Project" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-analysis.html"/>
-<link rel="next" href="final-words.html"/>
+<link rel="prev" href="literature.html"/>
+<link rel="next" href="results.html"/>
 <style type="text/css">
 p.abstract{
   text-align: center;
@@ -112,11 +112,12 @@ div.abstract{
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="results" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Results</h1>
+<div id="data-analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Data Analysis</h1>
+<p>After analyzed the data of each station, there were find many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)</p>
 <table>
 <caption>
-<span id="tab:data-450">Table 4.1: </span>Station 4917450 data
+<span id="tab:data-450">Table 3.1: </span>Station 4917450 data
 </caption>
 <thead>
 <tr>
@@ -731,110 +732,33 @@ Turb
 </tr>
 </tbody>
 </table>
-<p>Using the Spearman Method, the correlation coefficients between all the parameters show a strong positive correlation between the Total Phosphorus and the Chlorophyll-a
-<img src="Danisa_project_files/figure-html/unnamed-chunk-1-1.png" width="672" />
-The positive correlation between the TP and Chl-a is stronger for values of TP between 0.40 and 0.65. Analyzing the same parameter using the data from all the stations, the Chl-a tends to increase for values of TP greater than 0.40.</p>
-<pre><code>## `summarise()` regrouping output by &#39;LocationID&#39;, &#39;Date&#39; (override with `.groups` argument)</code></pre>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="Danisa_project_files/figure-html/chla-TP-1.png" width="672" /><img src="Danisa_project_files/figure-html/chla-TP-2.png" width="672" /></p>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<pre><code>## Warning: Removed 61 rows containing non-finite values (stat_smooth).</code></pre>
-<pre><code>## Warning: Removed 61 rows containing missing values (geom_point).</code></pre>
-<p><img src="Danisa_project_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre><code>## Warning: Removed 61 rows containing missing values (geom_point).</code></pre>
-<p><img src="Danisa_project_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
-<pre><code>## 
-## 	Kruskal-Wallis rank sum test
-## 
-## data:  Chla by month
-## Kruskal-Wallis chi-squared = 6.3667, df = 4, p-value = 0.1734</code></pre>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:graphs-1"></span>
-<img src="Danisa_project_files/figure-html/graphs-1.png" alt="Chlorophyll a distribution by month" width="80%" />
-<p class="caption">
-Figure 4.1: Chlorophyll a distribution by month
-</p>
-</div>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:graphs-2"></span>
-<img src="Danisa_project_files/figure-html/graphs-2.png" alt="Chlorophyll a distribution by month" width="80%" />
-<p class="caption">
-Figure 4.2: Chlorophyll a distribution by month
-</p>
-</div>
-<pre><code>## Warning: Removed 42 rows containing missing values (geom_bar).</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:graphs-3"></span>
-<img src="Danisa_project_files/figure-html/graphs-3.png" alt="Chlorophyll a distribution by month" width="80%" />
-<p class="caption">
-Figure 4.3: Chlorophyll a distribution by month
-</p>
-</div>
-<p><img src="Danisa_project_files/figure-html/pearson-1.png" width="672" /></p>
-<div class="figure" style="text-align: center"><span id="fig:boxplot1"></span>
-<img src="Danisa_project_files/figure-html/boxplot1-1.png" alt="Chlorophyll a distribution by month" width="80%" />
-<p class="caption">
-Figure 4.4: Chlorophyll a distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot2"></span>
-<img src="Danisa_project_files/figure-html/boxplot2-1.png" alt="Dissolved Oxygen distribution by month" width="80%" />
-<p class="caption">
-Figure 4.5: Dissolved Oxygen distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot3"></span>
-<img src="Danisa_project_files/figure-html/boxplot3-1.png" alt="Dissolved Nitrogen distribution by month" width="80%" />
-<p class="caption">
-Figure 4.6: Dissolved Nitrogen distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot4"></span>
-<img src="Danisa_project_files/figure-html/boxplot4-1.png" alt="Total Nitrogen distribution by month" width="80%" />
-<p class="caption">
-Figure 4.7: Total Nitrogen distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot5"></span>
-<img src="Danisa_project_files/figure-html/boxplot5-1.png" alt="PH distribution by month" width="80%" />
-<p class="caption">
-Figure 4.8: PH distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot6"></span>
-<img src="Danisa_project_files/figure-html/boxplot6-1.png" alt="Dissolved Phophorus distribution by month" width="80%" />
-<p class="caption">
-Figure 4.9: Dissolved Phophorus distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot7"></span>
-<img src="Danisa_project_files/figure-html/boxplot7-1.png" alt="Total Phophorus distribution by month" width="80%" />
-<p class="caption">
-Figure 4.10: Total Phophorus distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot8"></span>
-<img src="Danisa_project_files/figure-html/boxplot8-1.png" alt="Water Temperature distribution by month" width="80%" />
-<p class="caption">
-Figure 4.11: Water Temperature distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot9"></span>
-<img src="Danisa_project_files/figure-html/boxplot9-1.png" alt="Total distribution by month" width="80%" />
-<p class="caption">
-Figure 4.12: Total distribution by month
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:boxplot10"></span>
-<img src="Danisa_project_files/figure-html/boxplot10-1.png" alt="Turbidity distribution by month" width="80%" />
-<p class="caption">
-Figure 4.13: Turbidity distribution by month
-</p>
-</div>
-<div id="example-one" class="section level2">
-<h2><span class="header-section-number">4.1</span> Example one</h2>
-</div>
-<div id="example-two" class="section level2">
-<h2><span class="header-section-number">4.2</span> Example two</h2>
+<div id="data-quality" class="section level2">
+<h2><span class="header-section-number">3.1</span> Data Quality</h2>
+<p>The data size is not big, but it is enough to perform a good analysis. As it can be seen in table 3.1, there are not missing values in the station 4917450. The following figures show that there are not outliers.</p>
+<pre><code>##       Chla              DO               DN               TN        
+##  Min.   : 10.37   Min.   : 5.272   Min.   :0.3520   Min.   :0.5830  
+##  1st Qu.: 77.85   1st Qu.: 8.931   1st Qu.:0.6857   1st Qu.:0.6727  
+##  Median :133.11   Median :11.080   Median :0.7905   Median :0.7420  
+##  Mean   :148.99   Mean   :11.575   Mean   :1.1014   Mean   :0.9670  
+##  3rd Qu.:239.21   3rd Qu.:13.587   3rd Qu.:0.8995   3rd Qu.:1.0450  
+##  Max.   :389.10   Max.   :18.477   Max.   :4.7000   Max.   :2.2600  
+##        pH              DP               TP               TW       
+##  Min.   :8.510   Min.   :0.0210   Min.   :0.1960   Min.   :15.37  
+##  1st Qu.:8.714   1st Qu.:0.0905   1st Qu.:0.3093   1st Qu.:19.90  
+##  Median :8.922   Median :0.1130   Median :0.4910   Median :21.27  
+##  Mean   :8.917   Mean   :0.1671   Mean   :0.4652   Mean   :21.19  
+##  3rd Qu.:9.110   3rd Qu.:0.2205   3rd Qu.:0.6105   3rd Qu.:23.21  
+##  Max.   :9.550   Max.   :0.4450   Max.   :0.7630   Max.   :26.41  
+##       TDST            Turb       
+##  Min.   :220.0   Min.   : 15.10  
+##  1st Qu.:422.0   1st Qu.: 55.48  
+##  Median :514.0   Median : 64.80  
+##  Mean   :502.7   Mean   : 77.42  
+##  3rd Qu.:599.0   3rd Qu.: 92.00  
+##  Max.   :696.0   Max.   :178.00</code></pre>
+<p>The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.
+<img src="Danisa_project_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+Encontrar que esta ocurriendo con los otros parametros cuando la clorofila sube?</p>
 
 </div>
 </div>
@@ -843,8 +767,8 @@ Figure 4.13: Turbidity distribution by month
           </div>
         </div>
       </div>
-<a href="data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="literature.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -37,8 +37,8 @@ ul%>%
   addTiles()%>%
   addMarkers(lng = ~Longitude, lat= ~Latitude, popup= ~LocationName)
 ```
-The available data are from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. However, there are months in which there are no Chl-a data.The table 3.2 shows the processed data for the station 4917500. 
 
+The available data are from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. However, there are months in which there are no Chl-a data.The table 2.2 shows the processed data for the station 4917500. 
 
 ```{r table, include=FALSE}
 source(here::here("code/table.R"))
@@ -51,5 +51,3 @@ knitr::kable(
   booktabs = TRUE
 )
 ```
-
-After analyzed the data of each station, there were find many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be perform with this specific data set. 

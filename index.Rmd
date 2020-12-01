@@ -1,6 +1,8 @@
 --- 
-title: "Utah lake parameters analysis"
-author: "Danisa Dolder"
+title: "The nutrients - Chlorophyll-a relationship in Utah Lake, Utah"
+author:
+  - name: Danisa Dolder
+    email: danisadolder@gmail.com
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -8,9 +10,9 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 description: "CE EN 594R-001 Term Project"
-abstract: Parks provide important benefits to those who live near them, in the form of improved property 
+abstract: Utah Lake is a body of fresh water used for irrigation, recreation, and potable water supply. The first pioneer settlements, that found the necessary water resources to live in this arid area, produced a change in land use, impacting ecosystems, including the aquatic one. 
 ---
 
 # Introduction
 
-It is clear that nitrogen and phosphorous influence algal blooms in Utah lake, but the effect of other pollutants and environmental parameters including dissolved oxygen and temperature are not clearly understood. In this project, I will analyze if there is a relationship between all these parameters and the algal bloom, measure by the chlorophyll-a. Because of algal blooms are more common in Summer, the data will be categorized by month and by season. The data for this project is from the Ambient Water Quality Monitoring System (AWQMS) of the Utah Department of Environmental Quality (DEQ). This system has data from 1989 until today, but these data are more consistent in recent years. For this project, I will use the available data for the years 2017, 2018, and 2019.
+It is clear that phosphorous influences algal blooms in Utah lake, but the effect of other pollutants and environmental parameters including dissolved oxygen and temperature are not clearly understood. In this project, I will analyze if there is a relationship between all these parameters and the algal bloom, measure by the chlorophyll-a. Because of algal blooms are more common in Summer, the data will be categorized by month and by season. The data for this project is from the Ambient Water Quality Monitoring System (AWQMS) of the Utah Department of Environmental Quality (DEQ). This system has data from 1989 until today, but these data are more consistent in recent years. For this project, I will use the available data for the years 2017, 2018, and 2019.
