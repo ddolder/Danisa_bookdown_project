@@ -24,6 +24,8 @@ source(here::here("code/rename.R"))
 ```
 
 ```{r data-450, echo=FALSE}
+#data from station 04917450, months 5,6,7,8, and 9
+#show table
 data450<-data4917450[!(data4917450$month=="04" | data4917450$month=="10" | data4917450$month=="11"),]
 knitr::kable(
   head(data450,20), caption = 'Station 4917450 data',
@@ -34,12 +36,14 @@ knitr::kable(
 
 The data size is not big, but it is enough to perform a good analysis.  As it can be seen in table 3.1, there are not missing values in the station 4917450. The following stadistics show that there are not outliers.
 ```{r, echo=FALSE}
+#Data station 4917450 statistics
 data_sum<-select(data450,-Year,-month)
 summary(data_sum)
 ```
 
 The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.
 ```{r, echo=FALSE}
+#Chla distribution
 ggplot(data=data450, aes(Chla)) + 
   geom_histogram(binwidth=75, colour="black", fill="white")+
   labs(title='Chlorophyll-a Distribution', x='Chlorophyll-a')

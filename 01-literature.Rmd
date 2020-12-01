@@ -22,7 +22,7 @@ knitr::kable(
   kable_styling(latex_options="scale_down")
 ```
 ```{r include=FALSE}
-#contar la cantidad de estaciones
+#number of stations
 ul<-data[!duplicated(data$Longitude), ]
 total_stations<-nrow(ul)
 ```
@@ -30,7 +30,7 @@ total_stations<-nrow(ul)
 The data, that include data from `r total_stations` stations, were downloaded in October of 2020. 
 
 ```{r mapa, echo=FALSE}
-#graficar mapa y marcadores
+#map and markers
 ul%>%
   leaflet() %>%
   setView(lng=-111.83, lat=40.15, zoom=10)%>%
@@ -46,6 +46,7 @@ source(here::here("code/table.R"))
 
 
 ```{r datos500, echo=FALSE}
+#Table with station4917500 data
 knitr::kable(
   head(data4917500,20), caption = 'Station 4917500 data',
   booktabs = TRUE
