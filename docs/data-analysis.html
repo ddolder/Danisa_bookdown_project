@@ -86,10 +86,7 @@ div.abstract{
 <li class="chapter" data-level="3" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>3</b> Data Analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="data-analysis.html"><a href="data-analysis.html#data-quality"><i class="fa fa-check"></i><b>3.1</b> Data Quality</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a><ul>
-<li class="chapter" data-level="4.1" data-path="results.html"><a href="results.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="results.html"><a href="results.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
-</ul></li>
+<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -114,7 +111,7 @@ div.abstract{
             <section class="normal" id="section-">
 <div id="data-analysis" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Data Analysis</h1>
-<p>After analyzed the data of each station, there were find many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)</p>
+<p>After analyzed the data of each station, there were found many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)</p>
 <table>
 <caption>
 <span id="tab:data-450">Table 3.1: </span>Station 4917450 data
@@ -734,7 +731,7 @@ Turb
 </table>
 <div id="data-quality" class="section level2">
 <h2><span class="header-section-number">3.1</span> Data Quality</h2>
-<p>The data size is not big, but it is enough to perform a good analysis. As it can be seen in table 3.1, there are not missing values in the station 4917450. The following figures show that there are not outliers.</p>
+<p>As it can be seen in table 3.1, there are not missing values in the station 4917450. The data is properly formatted and classified. In the following table, we can see the parameters statistics:</p>
 <pre><code>##       Chla              DO               DN               TN        
 ##  Min.   : 10.37   Min.   : 5.272   Min.   :0.3520   Min.   :0.5830  
 ##  1st Qu.: 77.85   1st Qu.: 8.931   1st Qu.:0.6857   1st Qu.:0.6727  
@@ -756,9 +753,9 @@ Turb
 ##  Mean   :502.7   Mean   : 77.42  
 ##  3rd Qu.:599.0   3rd Qu.: 92.00  
 ##  Max.   :696.0   Max.   :178.00</code></pre>
-<p>The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.
-<img src="Danisa_project_files/figure-html/unnamed-chunk-2-1.png" width="672" />
-Encontrar que esta ocurriendo con los otros parametros cuando la clorofila sube?</p>
+<p>The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.</p>
+<p><img src="Danisa_project_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+The Spearman Method must be used to analyze the correlation between parameters.</p>
 
 </div>
 </div>
