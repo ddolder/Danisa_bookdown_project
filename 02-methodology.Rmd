@@ -17,7 +17,7 @@ source(here::here("code/table.R"))
 
 # Data Analysis 
 
-After analyzed the data of each station, there were find many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)
+After analyzed the data of each station, there were found many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)
 
 ```{r rename, include=FALSE}
 source(here::here("code/rename.R"))
@@ -34,7 +34,8 @@ knitr::kable(
 ```
 ## Data Quality
 
-The data size is not big, but it is enough to perform a good analysis.  As it can be seen in table 3.1, there are not missing values in the station 4917450. The following stadistics show that there are not outliers.
+As it can be seen in table 3.1, there are not missing values in the station 4917450. The data is properly formatted and classified. In the following table, we can see the parameters statistics:
+
 ```{r, echo=FALSE}
 #Data station 4917450 statistics
 data_sum<-select(data450,-Year,-month)
@@ -42,10 +43,11 @@ summary(data_sum)
 ```
 
 The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.
+
 ```{r, echo=FALSE}
 #Chla distribution
 ggplot(data=data450, aes(Chla)) + 
   geom_histogram(binwidth=75, colour="black", fill="white")+
   labs(title='Chlorophyll-a Distribution', x='Chlorophyll-a')
 ```
-Encontrar que esta ocurriendo con los otros parametros cuando la clorofila sube?
+The Spearman Method must be used to analyze the correlation between parameters.

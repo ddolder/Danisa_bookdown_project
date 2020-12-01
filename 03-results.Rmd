@@ -25,20 +25,22 @@ source(here::here("code/rename.R"))
 #data from station 04917450, months 5,6,7,8, and 9
 data450<-data4917450[!(data4917450$month=="04" | data4917450$month=="10" | data4917450$month=="11"),]
 ```
-Using the Spearman Method, the correlation coefficients between all the parameters show a strong positive correlation between the Total Phosphorus and the Chlorophyll-a
+Using the Spearman Method, the correlation coefficients between all the parameters show a strong positive correlation between the Total Phosphorus (TP) and the Chlorophyll-a (Chl-a) and a strong negative correlation between the Total Phosphorus (TP) and the Dissolved Oxygen (DO)
 ```{r heat-map, echo=FALSE}
 #heat map with all the parameters
 x = data450[,c(3:10)]
 ggcorr(x, nbreaks = 20, mid = "white", high="darkred", label=T, method = c('pairwise','spearman'))
 ```
-The positive correlation between the TP and Chl-a is stronger for values of TP between 0.40 and 0.65 mg/l. 
+To understand better what is the correlation between Chl-a and TP, the following graph shows the values of Chl-a in function of the values of the TP
 ```{r chla-TP, echo=FALSE}
 #Chla vs TP plot
 ggplot(data450, aes(x=TP, y=Chla))+
   geom_point(aes(color=month))+
   geom_smooth()
 ```
-The time series analysis of the Chl-a, TP, and TN shows that when the TN too high, the Chl-a decreases, even though the TP has value between 0.4 and 0.65.
+From the graph, we can see that the positive correlation between the TP and Chl-a is stronger for values of TP between 0.40 and 0.65 mg/l.
+
+Because TN is considered another primary nutrient to the production of algal bloom, and because the correlation coefficient between Chl-a and TN is low, a time series graph between Chl-a, TP, and TN is performed to see if the TN  is also influencing.
 
 ```{r data-timeseries, include=FALSE}
 #data matrix for the time series, Date = year-month-day
@@ -72,6 +74,7 @@ ggplot(data_serie, aes(x=Date))+
     geom_hline(yintercept=0.4, color='red')+
     geom_hline(yintercept=0.65, color='red')
 ```
+The time series analysis shows that when the TN too high, the Chl-a decreases, even though the TP has value between 0.4 and 0.65 mg/l.
 The positive correlation between the TN and Chl-a is for values of TN between 0.60 and 1.10 mg/l. 
 ```{r chla-TN, echo=FALSE}
 #Chla vs TN plot
