@@ -19,7 +19,8 @@ source(here::here("code/import.R"))
 knitr::kable(
   head(data_orig), caption = 'Example of the data',  
   booktabs = TRUE)%>% 
-  kable_styling(latex_options="scale_down")
+  kable_styling(latex_options="scale_down") %>%
+  scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 ```{r include=FALSE}
 #number of stations
