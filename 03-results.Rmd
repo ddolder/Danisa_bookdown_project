@@ -1,23 +1,18 @@
 # Results
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(leaflet)
-library(rprojroot)
-library(GGally)
+```{r setup-results, include=FALSE}
+source(here::here("code/setup.R"))
 ```
 
-```{r import, include=FALSE}
+```{r import-results, include=FALSE}
 source(here::here("code/import.R"))
 ```
 
-```{r table, include=FALSE}
+```{r table-results, include=FALSE}
 source(here::here("code/table.R"))
 ```
 
-```{r rename, include=FALSE}
+```{r rename-results, include=FALSE}
 source(here::here("code/rename.R"))
 ```
 
