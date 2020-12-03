@@ -66,8 +66,8 @@ ggplot(data_serie, aes(x=Date))+
     geom_line(aes(y=Chla/150, color="Chl-a"))+
     geom_point(aes(y=TN/2, color="TN"))+
     geom_line(aes(y=TN/2, color="TN"))+
-    geom_hline(yintercept=0.4, color='red')+
-    geom_hline(yintercept=0.65, color='red')
+    geom_hline(yintercept=0.4, color='black')+
+    geom_hline(yintercept=0.65, color='black')
 ```
 The time series analysis shows that when the TN too high, the Chl-a decreases, even though the TP has value between 0.4 and 0.65 mg/l.
 The positive correlation between the TN and Chl-a is for values of TN between 0.60 and 1.10 mg/l. 
@@ -88,8 +88,8 @@ ggplot(data_serie, aes(x=Date))+
     geom_line(aes(y=Chla/150, color="Chl-a"))+
     geom_point(aes(y=DO/12, color="DO"))+
     geom_line(aes(y=DO/12, color="DO"))+
-    geom_hline(yintercept=0.4, color='red')+
-    geom_hline(yintercept=0.65, color='red')
+    geom_hline(yintercept=0.4, color='black')+
+    geom_hline(yintercept=0.65, color='black')
 ```
 ```{r chla-DO, echo=FALSE}
 #Chla vs DO plot
