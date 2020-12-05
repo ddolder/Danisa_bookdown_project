@@ -1,6 +1,7 @@
 #ordenar datos por estacion
 stations<-data[!duplicated(data$LocationID), ]
 stations_ID<-stations$LocationID
+options(digits = 2)
 for(i in stations_ID){
   dataID<-data%>%
     filter(LocationID==i)%>%
