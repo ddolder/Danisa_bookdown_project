@@ -40,7 +40,7 @@ ul%>%
   addMarkers(lng = ~Longitude, lat= ~Latitude, popup= ~LocationName)
 ```
 
-The available data are from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. However, there are months in which there are no Chl-a data.The table 2.2 shows the processed data for the station 4917500. 
+The available data are from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. However, there are months in which there are no Chl-a data. The table 2.2 shows the processed data for the station 4917500. 
 
 ```{r table, include=FALSE}
 source(here::here("code/table.R"))
@@ -55,7 +55,7 @@ knitr::kable(
 ```
 
 ## Data Quality 
-After analyzed the data of each station, there were found many missing values for the chl-a parameter. Due to the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)
+After analyzed the data of each station, there were many missing values found for the chl-a parameter. Due to the fact that the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)
 
 ```{r rename-meth, include=FALSE}
 source(here::here("code/rename.R"))
@@ -86,4 +86,5 @@ ggplot(data=data450, aes(Chla)) +
   geom_histogram(binwidth=75, colour="black", fill="white")+
   labs(title='Chlorophyll-a Distribution', x='Chlorophyll-a')
 ```
+
 The Spearman Method must be used to analyze the correlation between parameters.
