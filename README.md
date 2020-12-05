@@ -6,10 +6,16 @@ https://ddolder.github.io/Danisa_bookdown_project/
 
 R packages used in your analysis:
 
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(leaflet)
-library(rprojroot)
-library(formattable)
-library(GGally)
+>library(tidyverse)
+
+>library(knitr)
+
+>library(kableExtra)
+
+>library(leaflet)
+
+>library(rprojroot)
+
+>library(formattable)
+
+>library(GGally)
