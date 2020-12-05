@@ -52,7 +52,7 @@ knitr::kable(
   head(data4917500,20), caption = 'Station 4917500 data',
   booktabs = TRUE
 )%>%
-  kable_classic(full_width = F, html_font = "Cambria")
+  kable_classic(full_width = T, html_font = "Cambria")
 ```
 
 ## Data Quality 
@@ -69,7 +69,7 @@ data450<-data4917450[!(data4917450$month=="04" | data4917450$month=="10" | data4
 knitr::kable(
   head(data450,20), caption = 'Station 4917450 data',
   booktabs = TRUE)%>%
-  kable_classic(full_width = F, html_font = "Cambria")
+  kable_classic(full_width = T, html_font = "Cambria")
 ```
 
 As it can be seen in table 3.1, there are not missing values in the station 4917450. The data is properly formatted and classified. In the following table, we can see the parameters statistics:
