@@ -60,8 +60,6 @@ div.abstract{
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
 <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-1.3.1/leaflet.js"></script>
@@ -70,6 +68,8 @@ div.abstract{
 <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -123,227 +123,13 @@ div.abstract{
 <div id="data-import" class="section level2">
 <h2><span class="header-section-number">3.1</span> Data Import</h2>
 <p>10 parameters of the UL data available from the DWQ from the years 2017, 2018, and 2019 are analyzed in this report.</p>
-<div style="border: 0px;overflow-x: scroll; width:100%; ">
-<table class="table" style="margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-1">Table 3.1: </span>Example of the data
-</caption>
-<thead>
-<tr>
-<th style="text-align:right;">
-LocationID
-</th>
-<th style="text-align:left;">
-LocationName
-</th>
-<th style="text-align:right;">
-Latitude
-</th>
-<th style="text-align:right;">
-Longitude
-</th>
-<th style="text-align:left;">
-Date
-</th>
-<th style="text-align:left;">
-Characteristic
-</th>
-<th style="text-align:left;">
-Fraction
-</th>
-<th style="text-align:right;">
-Value
-</th>
-<th style="text-align:left;">
-Unit
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-4917600
-</td>
-<td style="text-align:left;">
-UTAH LAKE GOSHEN BAY SOUTHWEST END
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
--112
-</td>
-<td style="text-align:left;">
-05-10-2017
-</td>
-<td style="text-align:left;">
-Temperature, water
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-17.83
-</td>
-<td style="text-align:left;">
-deg C
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4917600
-</td>
-<td style="text-align:left;">
-UTAH LAKE GOSHEN BAY SOUTHWEST END
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
--112
-</td>
-<td style="text-align:left;">
-05-10-2017
-</td>
-<td style="text-align:left;">
-pH
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-8.52
-</td>
-<td style="text-align:left;">
-None
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4917600
-</td>
-<td style="text-align:left;">
-UTAH LAKE GOSHEN BAY SOUTHWEST END
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
--112
-</td>
-<td style="text-align:left;">
-05-10-2017
-</td>
-<td style="text-align:left;">
-Dissolved oxygen (DO)
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-7.00
-</td>
-<td style="text-align:left;">
-mg/l
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4917600
-</td>
-<td style="text-align:left;">
-UTAH LAKE GOSHEN BAY SOUTHWEST END
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
--112
-</td>
-<td style="text-align:left;">
-05-10-2017
-</td>
-<td style="text-align:left;">
-Nitrogen
-</td>
-<td style="text-align:left;">
-Dissolved
-</td>
-<td style="text-align:right;">
-0.54
-</td>
-<td style="text-align:left;">
-mg/l
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4917600
-</td>
-<td style="text-align:left;">
-UTAH LAKE GOSHEN BAY SOUTHWEST END
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
--112
-</td>
-<td style="text-align:left;">
-05-10-2017
-</td>
-<td style="text-align:left;">
-Chlorophyll a, corrected for pheophytin
-</td>
-<td style="text-align:left;">
-Total
-</td>
-<td style="text-align:right;">
-12.60
-</td>
-<td style="text-align:left;">
-ug/l
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4917600
-</td>
-<td style="text-align:left;">
-UTAH LAKE GOSHEN BAY SOUTHWEST END
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
--112
-</td>
-<td style="text-align:left;">
-05-10-2017
-</td>
-<td style="text-align:left;">
-Chlorophyll a, corrected for pheophytin
-</td>
-<td style="text-align:left;">
-Total
-</td>
-<td style="text-align:right;">
-11.60
-</td>
-<td style="text-align:left;">
-ug/l
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <p>The data, that include data from 10 stations, were downloaded in October of 2020.</p>
-<div id="htmlwidget-0736d3ff603de1ede5aa" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0736d3ff603de1ede5aa">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[40.15,-111.83],10,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[40.06023518,40.16967582,40.1577293,40.169162,40.18856667,40.18913907,40.34216863,40.32087,40.29569,40.26828256],[-111.8743836,-111.8716056,-111.7913255,-111.777287,-111.7313142,-111.6999312,-111.8713257,-111.77754,-111.80282,-111.8299304],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["UTAH LAKE GOSHEN BAY SOUTHWEST END","UTAH LAKE 3 MI WNW OF LINCOLN BEACH","UTAH LAKE 1 MI NE OF LINCOLN POINT #03","Utah Lake 1 mile southeast of Bird Island","UTAH LAKE  OUTSIDE ENTRANCE TO PROVO BAY","UTAH LAKE AT MIDDLE OF PROVO BAY","UTAH LAKE 2 MI E OF SARATOGA SPRINGS #12","UTAH LAKE 0.5 MI W OF GENEVA DISCHARGE #15-A","Utah Lake 2 miles west of Vineyard","UTAH LAKE 1 MI EAST OF PELICAN POINT"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[40.06023518,40.34216863],"lng":[-111.8743836,-111.6999312]}},"evals":[],"jsHooks":[]}</script>
-<p>The available data are from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. However, there are months in which there are no Chl-a data. The table 2.2 shows the processed data for the station 4917500.</p>
-<table class=" lightable-classic" style="font-family: Cambria; margin-left: auto; margin-right: auto;">
+<div id="htmlwidget-5390d994f482c8dccf88" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5390d994f482c8dccf88">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[40.15,-111.83],10,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[40.06023518,40.16967582,40.1577293,40.169162,40.18856667,40.18913907,40.34216863,40.32087,40.29569,40.26828256],[-111.8743836,-111.8716056,-111.7913255,-111.777287,-111.7313142,-111.6999312,-111.8713257,-111.77754,-111.80282,-111.8299304],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["UTAH LAKE GOSHEN BAY SOUTHWEST END","UTAH LAKE 3 MI WNW OF LINCOLN BEACH","UTAH LAKE 1 MI NE OF LINCOLN POINT #03","Utah Lake 1 mile southeast of Bird Island","UTAH LAKE  OUTSIDE ENTRANCE TO PROVO BAY","UTAH LAKE AT MIDDLE OF PROVO BAY","UTAH LAKE 2 MI E OF SARATOGA SPRINGS #12","UTAH LAKE 0.5 MI W OF GENEVA DISCHARGE #15-A","Utah Lake 2 miles west of Vineyard","UTAH LAKE 1 MI EAST OF PELICAN POINT"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[40.06023518,40.34216863],"lng":[-111.8743836,-111.6999312]}},"evals":[],"jsHooks":[]}</script>
+<p>The available data are from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. The table 3.2 shows the processed data for the station 4917500.</p>
+<table class=" lightable-classic" style="font-family: Cambria; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
-<span id="tab:datos500">Table 3.2: </span>Station 4917500 data
+<span id="tab:datos500">Table 3.1: </span>Station 4917500 data
 </caption>
 <thead>
 <tr>
@@ -354,34 +140,34 @@ Year
 month
 </th>
 <th style="text-align:right;">
-Chlorophyll a Total
+Chla
 </th>
 <th style="text-align:right;">
-Dissolved oxygen (DO)
+DO
 </th>
 <th style="text-align:right;">
-Nitrogen Dissolved
+DN
 </th>
 <th style="text-align:right;">
-Nitrogen Total
+TN
 </th>
 <th style="text-align:right;">
 pH
 </th>
 <th style="text-align:right;">
-Phosphate-phosphorus Dissolved
+DP
 </th>
 <th style="text-align:right;">
-Phosphate-phosphorus Total
+TP
 </th>
 <th style="text-align:right;">
-Temperature, water
+TW
 </th>
 <th style="text-align:right;">
-Total dissolved solids Total
+TDS
 </th>
 <th style="text-align:right;">
-Turbidity
+Turb
 </th>
 </tr>
 </thead>
@@ -1147,14 +933,21 @@ NA
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span> <sup></sup> Chla: Chlorophyll-a, <sup></sup> DO: Dissolved Oxygen, <sup></sup> DN: Dissolved Nitrogen, <sup></sup> TN: Total Nitrogen, <sup></sup> DP: Dissolved Phosphate-phosphorus, <sup></sup> TP: Total Phosphate-phosphorus, <sup></sup> TW: Temperature, water, <sup></sup> TDS: Total Dissolved Solids, <sup></sup> Turb: Turbidity
+</td>
+</tr>
+</tfoot>
 </table>
 </div>
 <div id="data-quality" class="section level2">
 <h2><span class="header-section-number">3.2</span> Data Quality</h2>
-<p>After analyzed the data of each station, there were many missing values found for the chl-a parameter. Due to the fact that the station 4917450 is the only one that does not have missing values, all the analysis of this project is going to be performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September. The names of the columns were simplified (table 3.1)</p>
-<table class=" lightable-classic" style="font-family: Cambria; margin-left: auto; margin-right: auto;">
+<p>After analyzed the data of each station, there were many missing values found for the Chl-a parameter. Due to the fact that the station 4917450 is the only one that does not have missing values, all the analysis of this project is performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September (table 3.1).</p>
+<table class=" lightable-classic" style="font-family: Cambria; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
-<span id="tab:data-450">Table 3.3: </span>Station 4917450 data
+<span id="tab:data-450">Table 3.2: </span>Station 4917450 data
 </caption>
 <thead>
 <tr>
@@ -1189,7 +982,7 @@ TP
 TW
 </th>
 <th style="text-align:right;">
-TDST
+TDS
 </th>
 <th style="text-align:right;">
 Turb
@@ -1768,6 +1561,13 @@ Turb
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span> <sup></sup> Chla: Chlorophyll-a, <sup></sup> DO: Dissolved Oxygen, <sup></sup> DN: Dissolved Nitrogen, <sup></sup> TN: Total Nitrogen, <sup></sup> DP: Dissolved Phosphate-phosphorus, <sup></sup> TP: Total Phosphate-phosphorus, <sup></sup> TW: Temperature, water, <sup></sup> TDS: Total Dissolved Solids, <sup></sup> Turb: Turbidity
+</td>
+</tr>
+</tfoot>
 </table>
 <p>As it can be seen in table 3.1, there are not missing values in the station 4917450. The data is properly formatted and classified. In the following table, we can see the parameters statistics:</p>
 <pre><code>##       Chla           DO             DN            TN             pH     
@@ -1777,7 +1577,7 @@ Turb
 ##  Mean   :149   Mean   :11.6   Mean   :1.1   Mean   :0.97   Mean   :8.9  
 ##  3rd Qu.:239   3rd Qu.:13.6   3rd Qu.:0.9   3rd Qu.:1.04   3rd Qu.:9.1  
 ##  Max.   :389   Max.   :18.5   Max.   :4.7   Max.   :2.26   Max.   :9.6  
-##        DP             TP             TW            TDST          Turb    
+##        DP             TP             TW            TDS           Turb    
 ##  Min.   :0.02   Min.   :0.20   Min.   :15.4   Min.   :220   Min.   : 15  
 ##  1st Qu.:0.09   1st Qu.:0.31   1st Qu.:19.9   1st Qu.:422   1st Qu.: 55  
 ##  Median :0.11   Median :0.49   Median :21.3   Median :514   Median : 65  
@@ -1785,7 +1585,7 @@ Turb
 ##  3rd Qu.:0.22   3rd Qu.:0.61   3rd Qu.:23.2   3rd Qu.:599   3rd Qu.: 92  
 ##  Max.   :0.44   Max.   :0.76   Max.   :26.4   Max.   :696   Max.   :178</code></pre>
 <p>The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.</p>
-<p><img src="Danisa_project_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="Danisa_project_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>The Spearman Method must be used to analyze the correlation between parameters.</p>
 
 </div>

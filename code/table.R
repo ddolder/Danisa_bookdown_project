@@ -11,6 +11,15 @@ for(i in stations_ID){
     spread(Characteristic, mean_value)%>%
     arrange(Date)%>%
     separate(Date,into=c('Year', 'month','day'), sep="-", remove = TRUE)%>%
-    select(-day)
+    select(-day)%>%
+    rename(DO= 'Dissolved oxygen (DO)')%>%
+    rename(DN='Nitrogen Dissolved')%>%
+    rename(TN='Nitrogen Total')%>%
+    rename(DP='Phosphate-phosphorus Dissolved')%>%
+    rename(TP='Phosphate-phosphorus Total')%>%
+    rename(Chla='Chlorophyll a Total')%>%
+    rename(Turb='Turbidity')%>%
+    rename(TDS='Total dissolved solids Total')%>%
+    rename(TW='Temperature, water')
   assign(paste0("data", i), dataID)
 }
