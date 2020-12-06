@@ -81,7 +81,7 @@ knitr::kable(
            footnote_as_chunk = T)
 ```
 
-As it can be seen in table 3.1, there were not missing values in the station 4917450. The data was properly formatted and classified. In the following table, we can see the parameters statistics:
+As it can be seen in table 3.2, there were not missing values in the station 4917450. The data was properly formatted and classified. In the following table, we can see the parameters statistics:
 
 ```{r, echo=FALSE}
 #Data station 4917450 statistics
