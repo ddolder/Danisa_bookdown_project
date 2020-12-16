@@ -17,15 +17,15 @@ source(here::here("code/table.R"))
 #data from station 04917450, months 5,6,7,8, and 9
 data450<-data4917450[!(data4917450$month=="04" | data4917450$month=="10" | data4917450$month=="11"),]
 ```
-Using the Spearman Method, the correlation coefficients between all the parameters show a strong positive correlation between the Total Phosphorus (TP) and the Chlorophyll-a (Chl-a) and a strong negative correlation between the Total Phosphorus (TP) and the Dissolved Oxygen (DO)
+Using the Spearman Method, the correlation coefficients between all the parameters show a strong positive correlation between the Total Phosphorus (TP) and the Chlorophyll-a (Chl-a) and a strong negative correlation between the TP and the Dissolved Oxygen (DO).
 ```{r heat-map, echo=FALSE}
 #heat map with all the parameters
-ggcorr(data450[,c(3:12)], nbreaks = 20, mid = "white", high="darkred", label=T, method = c('pairwise','spearman'))
+ggcorr(data450[,c(3:11)], nbreaks = 20, mid = "white", high="darkred", label=T, method = c('pairwise','spearman'))
 ```
 
 ```{r corrgram, echo=FALSE}
 #corrgram with some the parameters
-corrgram(data450[,c(3,6,9,12)],
+corrgram(data450[,c(3,4,6,9)],
          lower.panel = panel.pts,
          upper.panel = panel.fill,
          diag.panel = panel.density,
@@ -33,7 +33,7 @@ corrgram(data450[,c(3,6,9,12)],
          cor.method = "spearman")
 ```
 
-Taking in consideration only the strong correlation coefficients, the analysis was focused in the Chl-a, TP, DO, and also in the TN to be considered a primary nutrient to the production of algal bloom.To understand better what is the correlation between Chl-a and TP, the following graph shows the values of Chl-a in function of the values of the TP for the 3 years analyzed.
+Taking in consideration only the strong correlation coefficients, the analysis was focused in the Chl-a, TP, DO, and also in the TN to be considered a primary nutrient to the production of algal bloom. To understand better what is the correlation between Chl-a and TP, the following graph shows the values of Chl-a in function of the values of the TP for the 3 years analyzed.
 
 ```{r chla-TP, echo=FALSE}
 #Chla vs TP plot
@@ -82,7 +82,6 @@ ggplot(data_serie, aes(x=Date))+
 ```
 
 The time series analysis shows that when the TN is too high, the Chl-a decreases, even though the TP has value between 0.35 and 0.65 mg/l.
-The positive correlation between the TN and Chl-a is for values of TN between 0.60 and 1.10 mg/l. 
 
 ```{r chla-TN, echo=FALSE}
 #Chla vs TN plot
@@ -91,7 +90,12 @@ ggplot(data450, aes(x=TN, y=Chla))+
   geom_smooth()
 ```
 
+
+The positive correlation between the TN and Chl-a is only for values of TN between 0.60 and 1.10 mg/l. 
+
 Contrary to expectations, TN influences algal growth only for low total values. For high values of TN, it seems to have a negative correlation.
+
+Aside from the TN, the DO is another possible factor for the production of algal bloom.
 
 Because the TP and DO have a strong negative correlation, the time series analysis is performed to see the relationship between these two variables and the Chl-a.
 
@@ -122,6 +126,4 @@ ggplot(data450, aes(x=TP, y=DO))+
   geom_smooth()
 ```
 
-```{r boxplot-chla, fig.cap='Chlorophyll a distribution by month', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
-boxplot(Chla~month,data=data450)
-```
+Although there is a clear correlation between DO and TP, the same does not occur between Chla and DO. Because algae produce large amounts of oxygen during the photosynthesis process and remove oxygen from the water during respiration, DO appears to depend on Chla and not vice versa.

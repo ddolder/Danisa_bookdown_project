@@ -1,4 +1,4 @@
-#ordenar datos por estacion
+#sort parameters by station
 stations<-data[!duplicated(data$LocationID), ]
 stations_ID<-stations$LocationID
 options(digits = 2)

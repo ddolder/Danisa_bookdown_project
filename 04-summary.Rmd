@@ -1,2 +1,7 @@
 # Discussion
 
+There is no strong correlation between all related parameters. The highest correlation (+/- 0.8 or more) can be seen only between Chla and TP and between TP and DO. This correlation was analyzed as well as the influence of TN because it is also considered a primary nutrient. A direct correlation between Chla and TN is ruled out. DO is more related to the changes of Chla and not vice versa. The only direct and indisputable correlation in the data analyzed for station 4917450 is between TP and Chla.  
+
+To discard any other strong correlation, more data would be necessary. In order for the data to be compared with those of the three years analyzed, samples of the parameters should be taken from station 4917450 of UL in the months of May through September.
+
+For a complete analysis of the lake, the same measurements should be made methodically at each of the stations. This information will be of important relevance when making decisions about the pollution of UL.

@@ -33,7 +33,7 @@ ul%>%
   addMarkers(lng = ~Longitude, lat= ~Latitude, popup= ~LocationName)
 ```
 
-The available data were from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. The table 3.2 shows the processed data for the station 4917500. 
+The available data were from April to November. These data were divided by station and filtered by year and month. The data from the same month was averaged. The table 3.1 shows the processed data for the station 4917500. 
 
 ```{r table, include=FALSE}
 source(here::here("code/table.R"))
@@ -59,7 +59,8 @@ knitr::kable(
 ```
 
 ## Data Quality 
-After analyzed the data of each station, there were many missing values found for the Chl-a parameter. Due to the fact that the station 4917450 was the only one that does not have missing values, all the analysis of this project was performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September (table 3.1).
+
+After analyzed the data of each station, there were many missing values found for the Chl-a parameter. Due to the fact that the station 4917450 was the only one that does not have missing values, all the analysis of this project was performed with this specific data set. To be able to compare the monthly average per year, we kept only the months from May to September (table 3.2).
 
 ```{r data-450, echo=FALSE}
 #data from station 4917450, months 5,6,7,8, and 9
