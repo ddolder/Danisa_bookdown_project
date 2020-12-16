@@ -95,7 +95,7 @@ The statistics show that, for the Chl-a, the mean is 12% bigger than the median.
 ```{r, echo=FALSE}
 #Chla distribution
 ggplot(data=data450, aes(Chla)) + 
-  geom_histogram(binwidth=65, colour="black", fill="white", boundary = 65)+
+  geom_histogram(binwidth=65, colour="black", fill="purple", boundary = 65)+
   labs(title='Chlorophyll-a Distribution', x='Chlorophyll-a')
 ```
 
