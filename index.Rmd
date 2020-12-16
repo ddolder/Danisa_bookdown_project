@@ -1,5 +1,5 @@
 --- 
-title: "The Nutrients - Chlorophyll-a Relationship in Utah Lake, Utah"
+title: "The Nutrients - Chlorophyll-a Relationship in Utah Lake, Utah."
 author:
   - name: Danisa Dolder
     email: danisadolder@gmail.com
