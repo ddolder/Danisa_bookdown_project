@@ -89,7 +89,7 @@ data_sum<-select(data450,-Year,-month)
 summary(data_sum)
 ```
 
-The probability distribution of the Chlorophyll-a is positive skewed. The Spearman Method must be used to analyze the correlation between parameters.
+The statistics show that, for the Chl-a, the mean is 12% bigger than the median. This means that the distribution is non-normal. We can also see in the Chlorophyll-a Distribution graph that the probability distribution of the Chlorophyll-a is positive skewed. In this case, the Spearman Method is used to analyze the parameter.
 
 ```{r, echo=FALSE}
 #Chla distribution
@@ -98,4 +98,3 @@ ggplot(data=data450, aes(Chla)) +
   labs(title='Chlorophyll-a Distribution', x='Chlorophyll-a')
 ```
 
-The Spearman Method must be used to analyze the correlation between parameters.
